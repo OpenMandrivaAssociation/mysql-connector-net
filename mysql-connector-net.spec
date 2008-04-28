@@ -1,5 +1,5 @@
 Name:           mysql-connector-net
-Version:        5.0.8.1
+Version:        5.0.9
 Release:        %mkrel 1
 License:        GPL
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -32,5 +32,5 @@ rm -rf "$RPM_BUILD_ROOT"
 %files
 %defattr(-,root,root)
 %doc README CHANGES COPYING EXCEPTIONS Release\ Notes.txt
-%{_prefix}/lib/mono/gac/MySql.Data/%{version}__*
+%{_prefix}/lib/mono/gac/MySql.Data/
 %{_prefix}/lib/mono/mysql-connector-net/MySql.Data.dll

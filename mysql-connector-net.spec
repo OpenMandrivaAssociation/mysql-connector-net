@@ -1,6 +1,6 @@
 Name:           mysql-connector-net
 Version:        5.0.9
-Release:        %mkrel 1
+Release:        %mkrel 2
 License:        GPL
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch: noarch

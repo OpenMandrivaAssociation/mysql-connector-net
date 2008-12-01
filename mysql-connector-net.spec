@@ -1,14 +1,12 @@
 Name:           mysql-connector-net
-Version:        5.0.9
-Release:        %mkrel 2
+Version:        5.1.7
+Release:        %mkrel 1
 License:        GPL
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch: noarch
 BuildRequires:  nant
-#BuildRequires:  nunit
 URL: http://dev.mysql.com/downloads/connector/net/
 Source:         %{name}-%{version}-src.zip
-Patch:          disable-test-suite.patch
 Group:          Development/Other
 Summary:        MySQL Connector/Net
 
@@ -17,10 +15,9 @@ MySQL Connector/Net is an ADO.NET driver for MySQL.
 
 %prep
 %setup -q -c
-%patch
 
 %build
-nant -buildfile:Client.build -D:nunit2.dir=/usr/lib/nunit mono-2.0
+nant -buildfile:Client.build  mono-2.0
 
 %install
 rm -rf "$RPM_BUILD_ROOT"

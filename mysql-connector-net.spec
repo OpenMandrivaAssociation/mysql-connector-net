@@ -1,13 +1,13 @@
 Name:           mysql-connector-net
-Version:        6.1.3
-Release:        %mkrel 2
+Version:        6.2.4
+Release:        %mkrel 1
 License:        GPL+
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch: noarch
 BuildRequires:  mono-devel >= 2.4.3
 URL: http://dev.mysql.com/downloads/connector/net/
 Source:         %{name}-%{version}-src.zip
-Patch: mysql-connector-net-6.1.3-fix-buildfile.patch
+Patch: mysql-connector-net-6.2.4-fix-buildfile.patch
 Group:          Development/Other
 Summary:        MySQL Connector/Net
 
@@ -16,7 +16,7 @@ MySQL Connector/Net is an ADO.NET driver for MySQL.
 
 %prep
 %setup -q -c
-%patch -p1
+%apply_patches
 
 %build
 xbuild MySQLClient-mono.sln
@@ -30,6 +30,6 @@ rm -rf "$RPM_BUILD_ROOT"
 
 %files
 %defattr(-,root,root)
-%doc README CHANGES COPYING EXCEPTIONS Release\ Notes.txt
+%doc README CHANGES COPYING Release\ Notes.txt
 %{_prefix}/lib/mono/gac/MySql.Data/
 %{_prefix}/lib/mono/mysql-connector-net/MySql.Data.dll

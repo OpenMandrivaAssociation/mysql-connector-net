@@ -16,7 +16,7 @@ MySQL Connector/Net is an ADO.NET driver for MySQL.
 
 %prep
 %setup -q -c
-%apply_patches
+%autopatch -p1
 
 %build
 xbuild MySQLClient-mono.sln

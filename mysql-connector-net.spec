@@ -5,7 +5,7 @@ License:        GPL+
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch: noarch
 BuildRequires:  mono-devel >= 2.4.3
-URL: http://dev.mysql.com/downloads/connector/net/
+URL: https://dev.mysql.com/downloads/connector/net/
 Source:         %{name}-%{version}-src.zip
 Patch: mysql-connector-net-6.2.4-fix-buildfile.patch
 Group:          Development/Other
